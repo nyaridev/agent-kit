@@ -49,7 +49,7 @@ spirit (a Luau module returns its table last; Rust puts `#[cfg(test)] mod tests`
   // ── Public API ────────────────────────────
   ```
 
-- Files under about 100 lines may skip dividers.
+- Only tiny files (under about 40 lines) may skip dividers. Anything longer gets them, so every file reads the same way.
 - Inside a long section, group related functions under a smaller sub-heading comment.
 
 ## Comments and naming

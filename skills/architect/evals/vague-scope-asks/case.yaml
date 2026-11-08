@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: vague-scope-asks
+expected_outcome: |
+  The request names no engine, genre or scope, and the project folder is empty. The agent writes no files and does not
+  guess a large plan. It asks one short question about scope and stack (with options or examples) before designing.

@@ -104,7 +104,8 @@ Follow `references/milestones.md`:
 1. Before each milestone after M0, show its steps and wait for a yes.
 2. Do the steps in order. Touch only the system this milestone is about.
 3. Finish with the done checks: it builds or runs, tests pass, checks pass if chosen, and the tracker is updated.
-4. Report what changed, suggest a commit message, and ask about the next milestone.
+4. Report what changed and suggest a commit message. In the same message, show the next milestone's numbered steps
+   and ask for a yes, so the user can approve it in one reply.
 
 When the work turns up something the plan didn't cover, stop. Propose an ADR change (a new ADR, or a superseding one)
 and get a yes before coding around it. When the user changes direction, update the ADRs and rules first, then the code.

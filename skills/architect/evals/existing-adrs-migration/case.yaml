@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: existing-adrs-migration
+expected_outcome: |
+  The agent records the approved plan on an existing project: the two old ADRs move from docs/decisions/ to docs/adr/
+  with their numbers, 0002 is marked superseded by a new 0003, docs/adr/README.md indexes all three, structure.md is removed
+  while testing.md stays unchanged, CLAUDE.md keeps its text and gains @AGENTS.md, AGENTS.md gets an Architecture section,
+  the code is untouched in M0, the tests still pass, and the agent asks before M1.
+context:
+  scaffold_script: place-files.sh

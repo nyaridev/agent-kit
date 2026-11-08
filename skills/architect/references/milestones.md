@@ -47,7 +47,8 @@ The plan from phase 3 is carried out as milestones M0, M1, M2… Each one is a s
    - `docs/adr/README.md` is updated: the milestone is marked done and the next one's steps are listed.
 5. **Report:** what changed, what was skipped and why, and a suggested commit message. The milestone is a safe point
    to roll back to. Commit only if the user asked you to.
-6. **Ask** about the next milestone.
+6. **Ask** about the next milestone by showing its numbered steps in the same message, not by asking whether to list
+   them.
 
 ## Automated checks
 
