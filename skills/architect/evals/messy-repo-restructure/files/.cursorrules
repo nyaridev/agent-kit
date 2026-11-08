@@ -1,0 +1,5 @@
+You are working on a Discord bot.
+- All commands live in bot.py.
+- Use snake_case.
+- Prefer f-strings.
+- Don't create new files unless needed.

@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: messy-repo-restructure
+expected_outcome: |
+  The agent reads the repo and changes no files. Its plan flags bot.py (over 1200 lines) for a mandatory split, lists the old
+  architecture rules (the Architecture section in AGENTS.md and .cursorrules) that will be replaced and what carries over, keeps
+  the AGENTS.md Commands section, makes M0 a no-behavior-change baseline, migrates one system per later milestone, and asks
+  for approval.
+context:
+  scaffold_script: place-files.sh

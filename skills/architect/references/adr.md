@@ -51,6 +51,7 @@ What we do, stated plainly. Name the folders, modules and dependency rules it cr
 
 - **Easier:** what this makes simple.
 - **Harder:** what it costs, and what to watch for.
+- **Later:** how the additions from the third design pass would land, one line each.
 - **Rules:** the rule files that apply it (`.claude/rules/architecture/<file>.md`).
 ```
 

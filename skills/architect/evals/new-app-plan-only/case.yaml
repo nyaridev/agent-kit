@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: new-app-plan-only
+expected_outcome: |
+  The agent plans only and writes no files. It presents one recommended architecture: a one-line direction, a folder tree,
+  the ADRs it would write, the rule files under .claude/rules/architecture/ with the files each applies to, and milestones
+  starting at M0 with numbered steps. It asks which automated-check option to use and asks for approval before writing anything.

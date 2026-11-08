@@ -69,19 +69,25 @@ Settle on one recommended design. Don't hand the user a menu: other options go i
 
 ## 3. Present and get approval
 
-Show in chat:
+The user has to read and judge this plan, so keep it to one screen: about 40 lines for a small project, 80 for a large
+one. A long plan hides the decisions that matter. The reasoning from the three passes goes into the ADRs in phase 4,
+not into this message. Show in chat:
 
-1. **Direction:** one sentence, then 3–6 lines of summary.
+1. **Direction:** one sentence, then up to 3 lines of summary.
 2. **Folder tree:** the top two levels, with a short comment on each.
-3. **Decisions:** each ADR to be written, as title, the decision in one line, and its main trade-off.
-4. **Rules:** each rule file to be written, with one line on what it covers and which files it applies to.
+3. **Decisions:** one line per ADR: title, the decision, and its main trade-off.
+4. **Rules:** one line per rule file, by its full path (`.claude/rules/architecture/overview.md`…): what it covers and
+   which files it applies to. Always include `overview.md` and `code-organization.md` (`references/rules-wiring.md`).
 5. **Replacements** (existing projects): the architecture or design rules and docs that will be removed, and what from
-   them is kept in the new rules (`references/rules-wiring.md` → Replacing old rules).
-6. **Milestones:** M0…Mn, each with its goal and numbered steps (`references/milestones.md`).
-7. **Automated checks:** ask which option the user wants (`references/milestones.md` → Automated checks), with your
+   them is kept in the new rules (`references/rules-wiring.md` → Replacing old rules). A short table works well.
+6. **Milestones:** M0 with its numbered steps, since approval covers it. Later milestones get one line each with their
+   goal; their steps are shown before each one starts (`references/milestones.md`).
+7. **Future needs the user named** (sync, multiplayer…): one line each on where they will land. Leave the other
+   walkthroughs for the ADRs.
+8. **Automated checks:** ask which option the user wants (`references/milestones.md` → Automated checks), with your
    pick first.
 
-Ask for approval. Revise and show the plan again until the user approves it. Approval covers phase 4 and M0. Every
+Add assumptions only when they change the design, at most three lines. Ask for approval. Revise and show the plan again until the user approves it. Approval covers phase 4 and M0. Every
 later milestone needs its own yes.
 
 ## 4. Record

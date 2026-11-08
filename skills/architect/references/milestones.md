@@ -21,7 +21,7 @@ The plan from phase 3 is carried out as milestones M0, M1, M2… Each one is a s
 
 | Project | M0 is |
 |---|---|
-| New | **Scaffold:** the folder tree; an entry point that runs; empty module skeletons in the section layout; the ADRs, overview and rules from phase 4; the checks, if chosen. |
+| New | **Scaffold:** the folder tree; an entry point that runs; each module as a header comment plus only the sections it already has code for; the ADRs, overview and rules from phase 4; the checks, if chosen. |
 | Existing | **Baseline:** confirm it builds or runs and its tests pass, before anything moves; add the files over 1000 lines to the tracker; set up the checks, if chosen. No behavior changes. |
 
 ## M1 and later

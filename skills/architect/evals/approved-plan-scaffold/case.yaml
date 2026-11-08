@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: approved-plan-scaffold
+expected_outcome: |
+  The agent records and scaffolds exactly the approved plan: docs/adr/0001-*.md (Accepted, with Context, Decision, Options
+  considered and Consequences), docs/adr/README.md with the ADR index and a milestone tracker, .claude/rules/architecture/overview.md
+  without paths frontmatter, code-organization.md with paths frontmatter and the 1000/1200 limits, an AGENTS.md Architecture
+  section linking them, a CLAUDE.md with @AGENTS.md, the M0 scaffold with section dividers and a working size check script.
+  It does not start M1 and asks before going on.

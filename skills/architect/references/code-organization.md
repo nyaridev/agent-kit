@@ -34,7 +34,8 @@ Order a file from what it needs, through what it holds, to what it does:
 7. **Public API:** what other files use.
 8. **Setup and exports:** initialization, the entry point, the export or return.
 
-Leave out the sections a file doesn't need. Where the language has its own idiomatic order, follow it and keep the
+Leave out the sections a file doesn't need, and never leave a divider with nothing under it: an empty section is noise
+for every reader. A placeholder module is just its header comment until code arrives. Where the language has its own idiomatic order, follow it and keep the
 spirit (a Luau module returns its table last; Rust puts `#[cfg(test)] mod tests` at the bottom; Python ends with
 `if __name__ == "__main__":`).
 
