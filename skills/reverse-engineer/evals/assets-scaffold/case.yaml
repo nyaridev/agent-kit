@@ -1,0 +1,12 @@
+schema_version: "1.1"
+name: assets-scaffold
+expected_outcome: |
+  The agent scaffolds exactly M0: a git repo whose .gitignore ignores _sdk, _data and _external; AGENTS.md with the
+  target table, folder map (game/client as later) and rules table; CLAUDE.md with @AGENTS.md; .claude/rules with
+  boundaries.md and research.md (no paths) and a code rule; .claude/settings.json denying edits to _sdk/target;
+  docs/README.md, docs/adr/README.md with the tracker, ADR-0001 scope and layout, a dated journal entry and
+  docs/sources.md; the game copied into _sdk/target/1.0.3/ with the install untouched and its hashes in docs/sources.md; a setup.bat that
+  checks the target copy and has sections for repos and tools. It does no recon and asks before M1,
+  showing its steps.
+context:
+  scaffold_script: place-files.sh

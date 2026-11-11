@@ -1,0 +1,5 @@
+/_sdk/
+/_data/
+/_external/
+target/
+__pycache__/

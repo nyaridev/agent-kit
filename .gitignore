@@ -6,6 +6,8 @@ __pycache__/
 dist/
 build/
 target/
+# Eval fixtures are test input, including a fake game copy in _sdk/target/
+!skills/*/evals/*/files/**
 
 # Local settings and secrets
 .env

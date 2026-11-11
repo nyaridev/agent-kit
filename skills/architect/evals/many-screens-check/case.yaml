@@ -1,0 +1,7 @@
+schema_version: "1.1"
+name: many-screens-check
+expected_outcome: |
+  The agent plans only and writes no files. It shows M3's numbered steps and how the milestone is checked: the game is
+  started once and one run opens, checks and closes each of the 60 screens in the same process, with the cost stated
+  (60 x 10 s for one launch per screen against the single-run estimate), a trial on a few screens first, one result line
+  per screen, and the method recorded in AGENTS.md under Working methods. It asks for a yes before starting.

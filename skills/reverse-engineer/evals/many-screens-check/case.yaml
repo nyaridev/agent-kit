@@ -1,0 +1,7 @@
+schema_version: "1.1"
+name: many-screens-check
+expected_outcome: |
+  The agent plans only and writes no files. It shows the next milestone's numbered steps and how it is tested: the client
+  is started once and a driver opens, checks and closes each of the 180 windows in the same session, with the cost stated
+  (180 x 12 s for one launch per window against the single-session estimate), a trial on a few windows first, one result
+  line per window in a log file, and the method recorded in .claude/rules/methods.md. It asks for a yes before starting.

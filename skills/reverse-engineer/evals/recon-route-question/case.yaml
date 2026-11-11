@@ -1,0 +1,10 @@
+schema_version: "1.1"
+name: recon-route-question
+expected_outcome: |
+  The agent does M1 recon on the local copy only: docs/findings/overview.md identifies Unity with Mono scripting (from
+  UnityPlayer.dll and Game_Data/Managed/Assembly-CSharp.dll) and the server address from StreamingAssets/server.json, each
+  with its source and status; a dated journal entry; docs/adr/0002-route.md with status Proposed and options considered;
+  the tracker updated; then it asks which route and which language, with its pick first. It writes no emulator or client
+  code and leaves _sdk/target unchanged.
+context:
+  scaffold_script: place-files.sh

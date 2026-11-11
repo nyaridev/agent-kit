@@ -82,5 +82,6 @@ For an existing project that already has architecture, design, structure or code
 3. **In phase 4,** write the new rules first. Then remove the old architecture files and sections, which git history
    keeps.
 4. **Leave alone** whatever isn't architecture: commands, git, testing, deployment and tone rules stay where they are.
-   A file that mixes both keeps its other sections.
+   A file that mixes both keeps its other sections. The one addition is `AGENTS.md` → Working methods, a table of
+   the fastest known way to do each recurring job (`methods.md`); it adds rows and rewrites nothing else.
 5. **Old ADRs are never removed.** Mark them superseded (`adr.md`).

@@ -6,7 +6,13 @@ The plan from phase 3 is carried out as milestones M0, M1, M2… Each one is a s
 
 - **One goal:** one system or one concern ("Save system", "Split the renderer"). Never two systems at once.
 - **Numbered steps**, each small enough to review: a few files and one visible result.
+- **Small enough for one session:** about 8 steps at most. Split a system that needs more, or that has many cases
+  of one kind, along its own seams: first the mechanism with a few cases end to end, then the rest in groups, each
+  its own milestone ("M3: screen framework and the 5 simplest screens; M4: shop and inventory screens"). Never one
+  milestone for the whole project or a whole large system.
 - **Order:** foundations first, so a milestone never depends on a later one.
+- **A named check:** how the milestone is proved done, by the cheapest check that can prove it (`methods.md`). A
+  check over many cases is one run that walks them all, never one launch per case.
 
 ```markdown
 ### M2: Inventory
@@ -15,6 +21,8 @@ The plan from phase 3 is carried out as milestones M0, M1, M2… Each one is a s
 2. Move item logic out of `src/player.ts` into `src/inventory/inventory.ts`.
 3. Point `shop.ts` and `hud.ts` at the new module.
 4. Done checks.
+
+Checked by: the inventory tests while working; the whole suite once at the end.
 ```
 
 ## M0
@@ -39,15 +47,17 @@ The plan from phase 3 is carried out as milestones M0, M1, M2… Each one is a s
    "Later" list.
 3. **Off the plan?** When something comes up that the plan didn't cover, stop and propose an ADR change before going
    on.
-4. **Done checks**, at the end of every milestone:
+4. **Too slow?** When a step is mostly startup, or you wait on it a third time, or the user says it's slow, stop and
+   find a faster method (`methods.md`), then record it in `AGENTS.md` → Working methods.
+5. **Done checks**, at the end of every milestone:
    - it builds or runs;
    - the tests pass, or the manual check the user agreed to;
    - the automated checks pass, if they were chosen;
    - no file is over 1200 lines;
    - `docs/adr/README.md` is updated: the milestone is marked done and the next one's steps are listed.
-5. **Report:** what changed, what was skipped and why, and a suggested commit message. The milestone is a safe point
-   to roll back to. Commit only if the user asked you to.
-6. **Ask** about the next milestone by showing its numbered steps in the same message, not by asking whether to list
+6. **Report:** what changed, what was skipped and why, what was slow and what replaced it, and a suggested commit
+   message. The milestone is a safe point to roll back to. Commit only if the user asked you to.
+7. **Ask** about the next milestone by showing its numbered steps in the same message, not by asking whether to list
    them.
 
 ## Automated checks

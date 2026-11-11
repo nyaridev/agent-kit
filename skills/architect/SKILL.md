@@ -14,7 +14,12 @@ follow, and a milestone plan that is built one approved milestone at a time.
 - **Clear over clever.** One direction, stated in one sentence, that a newcomer can follow without asking.
 - **As small as the project.** The smallest architecture that holds the project's real scope. No layers, patterns or
   extension points for needs nobody has named.
-- **One system at a time.** Design, build and migrate one system per milestone. Never leave two half-done.
+- **One system at a time.** Design, build and migrate one system per milestone, and split a large system into
+  several. Never leave two half-done, and never build the whole project in one go.
+- **The cheapest check that proves it.** Design each part so it can be checked without starting the whole program.
+  Before any job that repeats, count what it will cost and pay the startup once: one process walks every case, never
+  one launch per case. When a method turns out slow, stop, find a faster one and record it
+  (`references/methods.md`).
 - **Every rule earns its place.** If a rule wouldn't change what an agent writes, drop it. Reasons live in the ADRs;
   rules only say what to do.
 - **The project's other rules stay.** This skill owns architecture and code-organization rules only. Commands, git,
@@ -37,7 +42,9 @@ follow, and a milestone plan that is built one approved milestone at a time.
 - **New project:** from the request, settle what it does, its platform and stack, who uses it, and its rough size.
 - **Existing project:** read the README, `AGENTS.md`/`CLAUDE.md`, every rules folder (`.claude/rules/`,
   `.cursor/rules/`, `.cursorrules`, `.github/copilot-instructions.md`), `docs/`, any existing ADRs, the folder tree,
-  the package manifests, and the line counts of the largest source files. Note what the code does well and what hurts.
+  the package manifests, and the line counts of the largest source files. Note what the code does well and what hurts,
+  and how it is built and tested and how long that takes: a slow loop is a design problem to fix. Read the tree,
+  manifests and counts first, then only the files a decision depends on.
 - **Size the project.** It decides how much you write:
 
   | Size | Looks like | ADRs | Rule files |
@@ -59,7 +66,8 @@ Do all three passes before showing anything.
    before inventing anything.
 2. **Second pass: the critique.** For each part, name what it gains, what it costs, and what would break it. Cut
    anything that serves no current or clearly planned need. Check that every new file has one obvious home, that the
-   layers fit the project's size, and that a newcomer could follow it.
+   layers fit the project's size, that a newcomer could follow it, and that each part can be checked without
+   starting the whole program (`references/methods.md` → Design for a fast check).
 3. **Third pass: the future.** Walk three realistic future additions through the design (a new feature, a new system
    or screen, a new data source or platform). Each must land in one obvious place without touching unrelated modules.
    When one doesn't, fix the design. Add an extension point only where a named need requires it. These walkthroughs
@@ -81,7 +89,7 @@ not into this message. Show in chat:
 5. **Replacements** (existing projects): the architecture or design rules and docs that will be removed, and what from
    them is kept in the new rules (`references/rules-wiring.md` → Replacing old rules). A short table works well.
 6. **Milestones:** M0 with its numbered steps, since approval covers it. Later milestones get one line each with their
-   goal; their steps are shown before each one starts (`references/milestones.md`).
+   goal and how it will be checked; their steps are shown before each one starts (`references/milestones.md`).
 7. **Future needs the user named** (sync, multiplayer…): one line each on where they will land. Leave the other
    walkthroughs for the ADRs.
 8. **Automated checks:** ask which option the user wants (`references/milestones.md` → Automated checks), with your
@@ -101,11 +109,16 @@ later milestone needs its own yes.
 
 Follow `references/milestones.md`:
 
-1. Before each milestone after M0, show its steps and wait for a yes.
+1. Before each milestone after M0, show its steps and wait for a yes. Say how it will be checked: the cheapest check
+   that proves it, and for a check over many cases, the count, the time for one and the single run that covers them
+   all (`references/methods.md`).
 2. Do the steps in order. Touch only the system this milestone is about.
-3. Finish with the done checks: it builds or runs, tests pass, checks pass if chosen, and the tracker is updated.
-4. Report what changed and suggest a commit message. In the same message, show the next milestone's numbered steps
-   and ask for a yes, so the user can approve it in one reply.
+3. Watch the cost as you go. When a step is mostly startup, or you wait on it a third time, or the user says it's
+   slow, stop and find a faster method before continuing, then record it in `AGENTS.md` → Working methods.
+4. Finish with the done checks: it builds or runs, tests pass, checks pass if chosen, and the tracker is updated.
+5. Report what changed, what was slow and what replaced it, and suggest a commit message. A lesson that would help on
+   any project goes in as one line for the skill (`references/methods.md` → Improving this skill). In the same
+   message, show the next milestone's numbered steps and ask for a yes, so the user can approve it in one reply.
 
 When the work turns up something the plan didn't cover, stop. Propose an ADR change (a new ADR, or a superseding one)
 and get a yes before coding around it. When the user changes direction, update the ADRs and rules first, then the code.

@@ -1,0 +1,3 @@
+{
+  "permissions": { "deny": ["Edit(/_sdk/target/**)", "Write(/_sdk/target/**)"] }
+}
