@@ -42,3 +42,7 @@ Ask in plain words ("plan the architecture for…") or call it:
 /architect restructure this repo
 /reverse-engineer an old MMO I have installed, to run it on a local server
 ```
+
+## License
+
+MIT. See [LICENSE](LICENSE).
