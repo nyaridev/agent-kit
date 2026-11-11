@@ -15,6 +15,7 @@ source that gets copied out (`README.md` → Install).
 | `skills/<name>/SKILL.md` | One skill: frontmatter (`name`, `description`) and its workflow |
 | `skills/<name>/references/` | Details the skill reads when a step needs them |
 | `CHANGELOG.md` | What changed, per skill |
+| `assets/brand/` | The README's banners, dark and light |
 
 ## Rules
 

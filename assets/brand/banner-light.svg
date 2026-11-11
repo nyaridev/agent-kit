@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-labelledby="t d">
+  <title id="t">Agent Kit</title>
+  <desc id="d">Portable skills for AI coding agents. Each skill plans first and builds one approved milestone at a time.</desc>
+  <rect width="1280" height="320" rx="24" fill="#f6f7f4"/>
+  <rect x="121.2" y="91.2" width="137.6" height="137.6" rx="28" fill="none" stroke="#2f8f68" stroke-width="22.4" stroke-opacity="0.4"/>
+  <path d="M160 132L188 160L160 188M206 188H226" fill="none" stroke="#2f8f68" stroke-width="22.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M341 142.8A28 28 0 1 0 397 142.8A28 28 0 1 0 341 142.8ZM397 114.8V170.8M433 142.8A28 28 0 1 0 489 142.8A28 28 0 1 0 433 142.8ZM489 114.8V182.8A28 28 0 0 1 441.2 202.6M525 142.8H581A28 28 0 1 0 572.8 162.6M619 114.8V170.8M619 142.8A28 28 0 0 1 675 142.8V170.8M715 90V152.8A18 18 0 0 0 733 170.8M699 114.8H741M836 75.6V170.8M878 114.8L840 148M858 132L880 170.8M920 114.8V170.8M960 90V152.8A18 18 0 0 0 978 170.8M944 114.8H986" fill="none" stroke="#0e100f" stroke-width="22.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M772 142.8H800" fill="none" stroke="#2f8f68" stroke-width="22.4" stroke-linecap="round"/>
+  <g fill="#0e100f"><circle cx="920" cy="76.7" r="13.4"/></g>
+  <text x="332" y="266" fill="#5c5c57" font-family="'Segoe UI', Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22">Portable skills for AI coding agents.</text>
+  <g font-family="'JetBrains Mono', Consolas, Menlo, monospace" font-size="16" fill="#5c5c57" text-anchor="end">
+    <text x="1180" y="150">plans first</text>
+    <text x="1180" y="182">you approve</text>
+  </g>
+  <rect x="1194" y="134" width="6" height="56" rx="3" fill="#2f8f68"/>
+</svg>
